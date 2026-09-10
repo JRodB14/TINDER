@@ -1,19 +1,22 @@
 def GuardarPersonas():
 
-    nombre= input("Como te llamas?")
-    edad= input("Que edad tienes?")
-    ciudad= input("De donde eres?")
+    nombre= input("Digite su nombre completo")
+    edad= int (input("¿Que edad tienes?"))
+    ciudad= input("¿De donde eres?")
     genero= input("Cual es tu genero?")
     gbusca= input("Que genero busca?")
-    edadmin =input("Cual es la edad minima que buscas para tu futura cita?")
-    if edadmin < 18:
+
+     
+    edadmin =int (input("Cual es la edad minima que buscas para tu futura cita?"))
+    while edadmin < 18:
         print("Debe ser mayor de edad")
-        edadmin =input("Por favor coloque una edad permitida")
+        edadmin = int (input("Por favor coloque una edad permitida"))
     
-    edadmax =input("Cual es la edad maxima que buscas para tu futura cita?")
-    if 120 > edadmax:
+    edadmax = int (input("Cual es la edad maxima que buscas para tu futura cita?"))
+    while 120 > edadmax:
         print("Estas buscando el ataud o que?")
         edadmax =input("Por favor coloque una edad permitida")
+        edadmin or edadmax 
 
     distancia=input("Cuantos kilometros aceptas que este de distancia tu futura pareja?")
 
@@ -27,10 +30,7 @@ def RegistrarPersonas():
        print(usuario)
        usuario[i]= GuardarPersonas()
        
-
-
-
-
+       
 
 def main ():
     print ("----------------BIENVENIDO A TINDER CUN--------------")
